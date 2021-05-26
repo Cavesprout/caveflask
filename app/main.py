@@ -2,9 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route(request)
 def index():
-    return "<p>Index</p>"
+    return render(request, "index.html")
 
 @app.route("/test")
 def test_page():
